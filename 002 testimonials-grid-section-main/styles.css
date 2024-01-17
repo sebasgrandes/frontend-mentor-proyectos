@@ -1,0 +1,159 @@
+:root {
+    /* colores primarios */
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* colores neutrales */
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+    /* fuentes */
+    --fuentePrimaria: "Barlow Semi Condensed", sans-serif;
+}
+
+/* CONTROLES GLOBALES */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    /* background-color: var(--Moderate_violet); */
+    font-size: 1.6rem;
+    font-family: var(--fuentePrimaria);
+    background-color: var(--Light_grayish_blue);
+    color: var(--White);
+
+}
+
+p {
+    margin: 0;
+}
+
+.card__texto p {
+    margin: 2rem 0;
+}
+
+/* p {
+    margin: 0;
+} */
+
+/* ESTILOS */
+
+.centrado {
+    /* ! dudas sobre el position absolute y display flex, al achicar el ancho de la pantalla el contenido sobresale por la parte superior, ver soluciones */
+
+    /* margin: 8rem auto;height: 90rem; */
+    /* position: relative;
+    height: 100vh;
+    width: 100%; */
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* margin: auto 10; */
+    /* background-color: blue; */
+    padding: 4rem 0 4rem 0;
+    /* width: 100%; */
+}
+
+@media (min-width: 768px) {
+    .centrado {
+        padding: 8rem 0 8rem 0;
+    }
+}
+
+.grid {
+        /* width: min(139rem, 80%) */ /* TODO: ve la implementacion de este codigo */
+    /* width: min(40rem, 80%); */ 
+    max-width: 40rem;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+@media (min-width: 768px) {
+    .grid {
+        /* margin: 5rem; */
+        display: grid;
+        grid: repeat(2, 1fr) / repeat(4, 1fr);
+        max-width: 139rem;
+        /* width: min(139rem, 80%) */ /* TODO: ve la implementacion de este codigo */
+        gap: 3.6rem;
+    }
+}
+
+.card {
+    padding: 2.5rem 4rem;
+    border-radius: 1rem;
+    margin-bottom: 3.6rem;
+}
+
+.card:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin-bottom: 0;
+    }
+
+}
+
+.card--purple {
+    background-color: var(--Moderate_violet);
+    grid-column: 1 / 3;
+}
+
+.card--gray {
+    background-color: var(--Very_dark_grayish_blue);
+}
+
+.card--white {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.card--white,
+.card--white2 {
+    background-color: var(--White);
+    color: var(--Very_dark_blackish_blue);
+}
+
+.card--dark {
+    background-color: var(--Very_dark_blackish_blue);
+    grid-column: 2 / 4;
+}
+
+.card__texto--bold {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.card__texto--light {
+    color: var(--Light_gray);
+}
+
+.card__person {
+    display: flex;
+    align-items: center;
+}
+
+.card__imagenautor img {
+    /* border-color: var(--White); */
+    border: 0.2rem solid white;
+    border-radius: 50px;
+    width: 4rem;
+}
+
+.card__imagenautor {
+    margin-right: 2rem;
+}

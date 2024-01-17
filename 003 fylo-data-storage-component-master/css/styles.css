@@ -1,0 +1,220 @@
+:root {
+    /* colores */
+    --Gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+    --Pale_Blue: hsl(243, 100%, 93%);
+    --Grayish_Blue: hsl(229, 7%, 55%);
+    --Dark_Blue: hsl(228, 56%, 26%);
+    --Very_Dark_Blue: hsl(229, 57%, 11%);
+    --white: #FFFFFF;
+    /* tipografia */
+    --fuentePrimaria: 'Raleway', sans-serif;
+
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--fuentePrimaria);
+    color: var(--white);
+}
+
+.background {
+    background-color: var(--Very_Dark_Blue);
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+    color: var(--Pale_Blue);
+    font-weight: 300;
+}
+
+.flexdirection {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    align-items: center;
+    gap: 2rem;
+    width: 70%;
+    /* max-width: 100rem; */
+}
+
+
+@media (min-width: 768px) {
+    .flexdirection {
+        gap: 3rem;
+        flex-direction: row;
+        width: 80%;
+        max-width: 100rem;
+    }
+}
+
+
+.card {
+    border-radius: 1rem;
+    border-top-right-radius: 2rem;
+    padding: 4rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: unset;
+        padding: 5rem;
+
+    }
+}
+
+.card--left {
+    background-color: var(--Dark_Blue);
+    border-top-right-radius: 10rem;
+    /* display: block;
+    height: 100%; */
+}
+
+@media (min-width: 768px) {
+    .card--left {
+        flex-grow: 1;
+    }
+}
+
+.card--right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    /* background-color: blue; */
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .card--right {
+        flex-direction: column;
+        flex-grow: 3;
+        align-items: end;
+
+    }
+}
+
+.card__image {
+    margin-bottom: 2.5rem;
+}
+
+.card--up {
+    background-color: var(--white);
+    padding: 2rem;
+    width: unset;
+    margin-top: -2rem;
+}
+
+@media (min-width: 768px) {
+    .card--up {
+        margin-top: 0;
+        margin-bottom: -8%;
+        z-index: 0;
+    }
+}
+
+.card--up p {
+    color: var(--Very_Dark_Blue);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.card--up p span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--Grayish_Blue);
+}
+
+
+.card--down {
+    background-color: var(--Dark_Blue);
+    width: 100%;
+}
+
+.card__progresstext p {
+    font-weight: 600;
+}
+
+.card__progresstext {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__icons {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.card__icon {
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--Very_Dark_Blue);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__textmain {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .card__textmain {
+        text-align: left;
+    }
+}
+
+.card__textmain span {
+    font-weight: 600;
+}
+
+
+.barra {
+    margin: 1.75rem 0 1rem 0;
+    height: 2.25rem;
+    background-color: var(--Very_Dark_Blue);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.barra--color {
+    width: 81.5%;
+    height: 100%;
+    background: linear-gradient(to right, var(--Gradient));
+
+    border-radius: 1rem;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: end;
+}
+
+.barra--punto {
+    height: 100%;
+    width: 1.05rem;
+    border-radius: 50%;
+    background-color: var(--white);
+}

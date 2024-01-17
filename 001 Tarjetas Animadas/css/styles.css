@@ -1,0 +1,94 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(39, 39, 39);
+}
+
+p {
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cards {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    /* background-color: blue; */
+    /* width: 100%; */
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.titulo p {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.autor-imagen {
+
+    width: 4rem;
+    height: 4rem;
+}
+
+.autor-imagen img {
+
+    border-radius: 50%;
+}
+
+.card {
+    overflow: hidden;
+    padding: 3rem;
+    background-color: #FF5763;
+    border-radius: 1rem;
+    max-width: 30rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -5rem;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    transition: transform 0.2s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+.card:nth-child(1) {
+    margin-left: 0;
+
+}
+
+.card:hover {
+    transform: rotate(4deg);
+    margin-right: 2rem;
+}
+.card:last-child:hover {
+    margin-right: 0;
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}

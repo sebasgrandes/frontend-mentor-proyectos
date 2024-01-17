@@ -1,0 +1,80 @@
+/* TODO fijate si esta bien todo el codigo */
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light_gray: hsl(212, 45%, 89%);
+  --Grayish_blue: hsl(220, 15%, 55%);
+  --Dark_blue: hsl(218, 44%, 22%)
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--Light_gray);
+  font-size: 15px;
+  font-family: "Outfit";
+}
+
+.centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* height: 100vh; */
+  /* no tiene tanto soporte creo */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.contenedor {
+  background-color: white;
+  max-width: 350px;
+  height: 545px;
+  padding: 18px;
+  border-radius: 20px;
+  /* sombras */
+  -webkit-box-shadow: 5px 5px 31px -12px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 5px 5px 31px -12px rgba(0, 0, 0, 0.49);
+  box-shadow: 5px 5px 31px -12px rgba(0, 0, 0, 0.49);
+}
+
+.imagenqr {
+  max-width: 100%;
+  border-radius: 10px;
+
+}
+
+.contenedor__texto {
+  padding-top: 10px;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: var(--Dark_blue);
+}
+
+p {
+  padding: 0 1rem;
+  font-size: 1.7rem;
+  color: var(--Grayish_blue);
+}
